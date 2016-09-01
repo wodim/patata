@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <title>Patata</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body onload="patata.ls.load(); return false;">
+    <div class="wrapper">
+        <dl class="input">
+            <dt>🛡 Tanks:</dt>
+            <dd><input type="number" class="amount" data-type="tank" min="0" value="1" onchange="patata.ls.store(); return false;" onkeyup="patata.ls.store(); return false;">
+                <input type="text" class="players" data-type="tank" placeholder="Pepito, Fulanito, Menganito" onchange="patata.ls.store(); return false;" onkeyup="patata.ls.store(); return false;"></dd>
+            <dt>➕ Healers:</dt>
+            <dd><input type="number" class="amount" data-type="healer" min="0" value="1" onchange="patata.ls.store(); return false;" onkeyup="patata.ls.store(); return false;">
+                <input type="text" class="players" data-type="healer" placeholder="Pepito, Fulanito, Menganito" onchange="patata.ls.store(); return false;" onkeyup="patata.ls.store(); return false;"></dd>
+            <dt>⚔ DPS:</dt>
+            <dd><input type="number" class="amount" data-type="dps" min="0" value="3" onchange="patata.ls.store(); return false;" onkeyup="patata.ls.store(); return false;">
+                <input type="text" class="players" data-type="dps" placeholder="Pepito, Fulanito, Menganito" onchange="patata.ls.store(); return false;" onkeyup="patata.ls.store(); return false;"></dd>
+        </dl>
+        <button class="sort" onclick="patata.sort(); return false;">Ordenar</button>
+        <div class="result"></div>
+    </div>
+    <script src="zepto.min.js"></script>
+    <script src="storage.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
